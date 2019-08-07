@@ -85,15 +85,14 @@ end
 
 arr =[1111,2,3]
 words = ['test', 'one', 'two', 'three']
-#p arr.each {|a| a}
-#p arr.my_each {|a| a}
+#arr.each {|a| puts a}
+#arr.my_each {|a| puts a}
 
 #arr.each_with_index { |val,index| puts "index: #{index} for #{val}" if val < 30}
-#arr.my_each_with_index { |val,index| puts "index: #{index} for #{val}" if val < 30}
 
-#arr.my_select { |item| item > 2 }
+#p arr.my_select { |item| item > 2 }
 
-#p words.my_all? {|word| word.length >= 4}
+#p words.my_all? {|word| word.length == 4}
 #p words.my_any? {|word| word.length >= 6}
 
 #p arr.my_none? {|number| number == 1111}
