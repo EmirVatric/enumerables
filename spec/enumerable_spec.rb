@@ -46,3 +46,26 @@ let(:array) { [2,5,7,3,7] }
     expect(array.my_none? {|a| a == 4}).to eql(true)
   end
 end
+
+describe "#my_count" do
+  let(:array) { [2,5,7,3,7] }
+      it "returns the numbers of element in an array" do
+        expect(array.my_count).to eql(5)
+      end
+end
+
+describe "#my_map" do
+  let(:array) { [2,5,7,3,7] }
+  it "creates a new array containing the values returned by the block" do
+      expect(array.my_map {|x| x + 2}).to eql([4,7,9,5,9])
+  end
+end
+
+describe "#my_inject" do
+  let(:array) { [2,5,7,3,7] }
+  it "reduces all elements of the array additionning all to output a single element" do
+      expect(array.my_inject {|a,b| a + b}).to eql(24)
+  end
+end
+
+
