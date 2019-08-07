@@ -50,7 +50,7 @@ end
 describe "#my_count" do
   let(:array) { [2,5,7,3,7] }
       it "returns the numbers of element in an array" do
-        expect(array.my_count).to eql(5)
+        expect(array.my_count {|a| a}).to eql(5)
       end
 end
 
@@ -64,7 +64,14 @@ end
 describe "#my_inject" do
   let(:array) { [2,5,7,3,7] }
   it "reduces all elements of the array additionning all to output a single element" do
-      expect(array.my_inject {|a,b| a + b}).to eql(24)
+      expect(array.my_inject(0) {|a,b| a + b}).to eql(24)
+  end
+end
+
+describe "#multiply_els" do
+let(:array) { [2,5,7,3,7] }
+  it 'multiply all numbers in array' do
+    expect(multiply_els(array)).to eql(1470)  
   end
 end
 
