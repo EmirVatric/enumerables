@@ -9,3 +9,4 @@ Used:
 #### Authors
 
 - Emir Vatric -- [User Github link](https://github.com/EmirVatric)
+- Samuel Cornet -- [User Github link](https://github.com/CornetS28)
